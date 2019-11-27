@@ -8,8 +8,6 @@ drop table if exists ANIMAL;
 
 drop table if exists ESPECE;
 
-drop table if exists IDENTIFICATION;
-
 drop table if exists PROPRIETAIRE;
 
 drop table if exists RACE;
