@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  20/11/2019 14:12:46                      */
+/* Date de crÃ©ation :  20/11/2019 14:12:46                      */
 /*==============================================================*/
 
 
@@ -31,10 +31,10 @@ create table ANIMAL
    DATEARRIVEANIMAL     date,
    DATEDEPARTANIMAL     date,
    DESCRIPTION          varchar(200),
-   SEXE                 bool,
-   CASTRE               bool,
+   SEXE                 varchar(1),
+   CASTRE               varchar(1),
    AGE                  int,
-   VACCINER             bool,
+   VACCINER             varchar(1),
    IMAGE                varchar(40),
    PRIXADOPTION         numeric(6,2),
    primary key (IDANIMAL)
@@ -48,16 +48,6 @@ create table ESPECE
    CODEES               varchar(3) not null,
    LIBELLEES            varchar(30),
    primary key (CODEES)
-);
-
-/*==============================================================*/
-/* Table : IDENTIFICATION                                       */
-/*==============================================================*/
-create table IDENTIFICATION
-(
-   CODEIDEN             varchar(2) not null,
-   LIBELLEIDEN          varchar(30),
-   primary key (CODEIDEN)
 );
 
 /*==============================================================*/
@@ -94,7 +84,7 @@ create table STATUT
    primary key (CODESTA)
 );
 
-alter table ANIMAL add constraint FK_ANCIEN foreign key (PRO_IDPRO)
+alter table ANIMAL add constraint FK_ANCIEN foreign key (IDPRO_ANCIEN)
       references PROPRIETAIRE (IDPRO) on delete restrict on update restrict;
 
 alter table ANIMAL add constraint FK_APPARTENIR foreign key (CODERACE)
@@ -102,9 +92,6 @@ alter table ANIMAL add constraint FK_APPARTENIR foreign key (CODERACE)
 
 alter table ANIMAL add constraint FK_ETRE foreign key (CODESTA)
       references STATUT (CODESTA) on delete restrict on update restrict;
-
-alter table ANIMAL add constraint FK_IDENTIFIER foreign key (CODEIDEN)
-      references IDENTIFICATION (CODEIDEN) on delete restrict on update restrict;
 
 alter table ANIMAL add constraint FK_NOUVEAU foreign key (IDPRO)
       references PROPRIETAIRE (IDPRO) on delete restrict on update restrict;
