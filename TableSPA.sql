@@ -20,7 +20,7 @@ drop table if exists STATUT;
 create table ANIMAL
 (
    IDANIMAL             int not null,
-   CODEIDEN             varchar(2),
+   CODEIDEN             varchar(10),
    IDPRO           		int,
    IDPRO_ANCIEN         int,
    CODESTA              varchar(2) not null,
