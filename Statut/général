@@ -1,0 +1,9 @@
+
+
+
+a mettre dans le routeur :
+
+
+Route::prefix('Statut')->group(function () {
+    Route::get('/getListeStatut', 'StatutController@getListeStatut')->middleware('cors');
+});
