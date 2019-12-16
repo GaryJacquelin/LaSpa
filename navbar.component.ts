@@ -16,30 +16,32 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router, private usersService: UsersService) { }
 
 
-
   action() {
 
     /* on regarde si il est connecter ou pas  */
     if (localStorage.getItem('estConnecter')) {
+      /* s'il est connecté on le déconnecte */
       this.usersService.getDeconnexion();
       localStorage.setItem('estConnecter', 'false');
-      console.log('nooooooooooo');
       this.router.navigate(['/accueil']);
     } else {
+      /* s'il n'est pas connecté on l'envoie vers la page de connexion */
       this.router.navigate(['/connexion']);
     }
   }
 
   ngOnInit() {
-    /* si la varialbe de session n'exister pas encore */
+    /* pour instancier la variable de session quand on démarre le site */
     if (this.antiDebileAngularQuiRetientVariable == 0) {
       localStorage.setItem('estConnecter', 'false');
       this.antiDebileAngularQuiRetientVariable++;
     }
     /* on regarde si il est connecter ou pas  */
     if (localStorage.getItem('estConnecter') == 'true') {
+      /* si est connecté il peu se déconnecter */
       this.actionAffichage = 'se déconnecter';
     } else {
+      /* sinon on le propose de se connecter */
       this.actionAffichage = 'se connecter';
     }
   }
