@@ -48,3 +48,17 @@ baseURL_Identification: 'http://localhost/spa/backend/ProjetSPA/public/api/Ident
 
 attention rajouter le service dans le module.
 
+
+résultat de postman :
+
+[
+    {
+        "codeIDEN": "NO",
+        "libelleIDEN": "aucun identification"
+    },
+    {
+        "codeIDEN": "PU",
+        "libelleIDEN": "puce"
+    }
+]
+
