@@ -1,2 +1,6 @@
 
 l'identification
+
+Route::prefix('Identification')->group(function () {
+    Route::get('/getListeIdentification', 'IdentificationController@getListeIdentification')->middleware('cors');
+});
