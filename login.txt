@@ -1,2 +1,19 @@
 https://codepen.io/jcoulterdesign/pen/azepmX
 https://codepen.io/ehermanson/pen/KwKWEv
+{
+     "CODEIDEN": "PU",
+     "IDPRO" : null,
+     "IDPRO_ANCIEN" : null,
+     "CODESTA" : "AA",
+     "CODERACE" : "SI",
+     "NOMANIMAL" : "stephanie",
+     "DATEARRIVEANIMAL": "2018-05-20",
+     "DATEDEPARTANIMAL" :"2018-05-06",
+     "DESCRIPTION" : " sfsfsdfsdfds",
+     "SEXE" : "F",
+     "CASTRE" : "O",
+     "AGE" : 1,
+     "VACCINER" : "O",
+     "IMAGE" : "image.jpg",
+     "PRIXADOPTION" : 150
+}
