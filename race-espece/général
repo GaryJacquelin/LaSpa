@@ -1,3 +1,11 @@
 
 gestion de la race et de lespèce pour l'ajout
 
+
+route API 
+
+Route::prefix('Race')->group(function () {
+    Route::get('/getListeRace', 'RaceController@getListeRace')->middleware('cors');
+});
+
+
